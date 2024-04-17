@@ -60,7 +60,7 @@ function App() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (unDeliverablePlace.includes(userAddress.zip)) {
+    if (unDeliverablePlace.has(userAddress.zip)) {
       alert("Sorry we can deliver this location");
       return;
     }
